@@ -1,11 +1,8 @@
 {
-  "name": "@leah.gorospe/LG-NPM-TEST",
-  "version": "1.0.0",
+  "name": "@leah.gorospe/lg-npm-test-2202",
+  "version": "1.0.4",
   "description": "npm test",
   "main": "app.js",
-  "scripts": {
-    "test": "mocha"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leahgorospe/LG-NPM-TEST.git"
@@ -19,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/leahgorospe/LG-NPM-TEST/issues"
   },
-  "homepage": "https://github.com/leahgorospe/LG-NPM-TEST#readme"
+  "homepage": "https://github.com/leahgorospe/LG-NPM-TEST#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
