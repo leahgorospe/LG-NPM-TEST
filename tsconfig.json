@@ -1,0 +1,30 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "target": "es5",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "skipDefaultLibCheck": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "lib": [
+      "es5",
+      "es6",
+      "es7",
+      "dom"
+    ]
+  },
+  "exclude": [
+    "bin",
+    "node_modules"
+  ],
+  "declaration": true,
+  "paths": {
+    "@microsoft/signalr": [
+      "./node_modules/@microsoft/signalr"
+    ]
+  }
+}
