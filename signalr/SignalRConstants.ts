@@ -1,2 +1,2 @@
 // Notification Hub
-export const sendNotification = "SendNotification";
+export const sendNotification2 = "SendNotification";

@@ -7,7 +7,7 @@ import {
 } from "@microsoft/signalr";
 
 
-export class BaseMonitorHubConnection {
+export class BaseMonitorHubConnection2 {
     public connection: HubConnection;
     public hubEndpoint: string;
 
