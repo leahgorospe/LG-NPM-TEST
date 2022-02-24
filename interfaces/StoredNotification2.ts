@@ -1,4 +1,4 @@
-export interface StoredNotification {
+export interface StoredNotification2 {
 	id: number;
 	userEmail: string;
 	created: string;
