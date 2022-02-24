@@ -4,20 +4,9 @@ import { StoredNotification2 } from "./../interfaces/StoredNotification2";
 
 
 export class NotificationsHubConnection2 extends BaseMonitorHubConnection2 {
-    /**
-     * Holds the singleton class
-     *
-     * @private
-     * @static
-     * @type {NotificationsHubConnection}
-     * @memberof NotificationsHubConnection
-     */
+    
     private static instance: NotificationsHubConnection2;
     
-    /**
-     * Creates an instance of NotificationsHubConnection.
-     * @memberof NotificationsHubConnection
-     */
     private constructor(signalRBase: string, token: string) {
         super("/notification2", signalRBase, token);
     }
