@@ -23,8 +23,6 @@
   ],
   "declaration": true,
   "paths": {
-    "@microsoft/signalr": [
-      "./node_modules/@microsoft/signalr"
-    ]
+    
   }
 }

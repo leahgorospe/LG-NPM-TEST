@@ -17,7 +17,7 @@ module.exports = merge(common, {
     //Output a plain main.js file, no cache busting
     output: {
         path: path.join(__dirname, bundleOutputDir),
-        filename: '[name].ts',
+        filename: '[name].js',
         publicPath: '/dist/'
     }
 });

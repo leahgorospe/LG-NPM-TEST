@@ -6,5 +6,3 @@ function registerNotification(signalRBase, token) {
     NotificationsHubConnection2.init(signalRBase, token);
 }
 
-module.exports = registerNotification
-
