@@ -8,9 +8,9 @@ import { BaseMonitorHubConnection2 } from "./signalr/BaseMonitorHubConnection2";
 ////}
 
 
-module.exports = {
-    NotificationsHubConnection2,
-    BaseMonitorHubConnection2
-};
+//module.exports = {
+//    NotificationsHubConnection2,
+//    BaseMonitorHubConnection2
+//};
 
 //https://stackoverflow.com/questions/32657516/how-to-properly-export-an-es6-class-in-node-4
