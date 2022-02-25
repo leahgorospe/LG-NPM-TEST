@@ -7,11 +7,11 @@ export class NotificationsHubConnection2 extends BaseMonitorHubConnection2 {
     
     private static instance: NotificationsHubConnection2;
     
-    private constructor(signalRBase: string, token: string) {
+    private constructor(signalRBase, token) {
         super("/notification2", signalRBase, token);
     }
 
-    public static init(signalRBase: string, token: string) {
+    public static init(signalRBase, token) {
         if (!NotificationsHubConnection2.instance) {
             NotificationsHubConnection2.instance = new NotificationsHubConnection2(signalRBase, token);
         }
