@@ -8,4 +8,4 @@ function registerNotification(signalRBase, token) {
 }
 
 
-module.exports = registerNotification;
+module.exports = registerNotification
