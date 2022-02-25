@@ -11,7 +11,7 @@ export class BaseMonitorHubConnection2 {
     public connection: HubConnection;
     public hubEndpoint: string;
 
-    constructor(hubEndpoint: string, signalRBase: string, token: string) {
+    constructor(hubEndpoint, signalRBase, token) {
         this.hubEndpoint = hubEndpoint;    
         this.connection = new HubConnectionBuilder()
             .withUrl(`${signalRBase}${hubEndpoint.startsWith('/') ? hubEndpoint : ('/' + hubEndpoint)}`, {
