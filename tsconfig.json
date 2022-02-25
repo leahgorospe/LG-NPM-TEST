@@ -23,7 +23,7 @@
   ],
   "declaration": true,
   "paths": {
-    "knockout-postbox": [
+    "@microsoft/signalr": [
       "../../../node_modules/@microsoft/signalr"
     ]
   }
