@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\dist",
+    "\\interfaces",
+    "\\signalr"
   ],
-  "SelectedNode": "\\app.js",
+  "SelectedNode": "\\index.ts",
   "PreviewInSolutionExplorer": false
 }
