@@ -13,6 +13,7 @@ export class NotificationsHubConnection2 {
     }
 
     public static init(signalRBase, token) {
+        alert('init');
         if (!NotificationsHubConnection2.instance) {
             NotificationsHubConnection2.instance = new NotificationsHubConnection2(signalRBase, token);
         }
