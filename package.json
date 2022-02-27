@@ -1,8 +1,8 @@
 {
   "name": "@leah.gorospe/lg-npm-test-2202",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "description": "npm test",
-  "main": "main.ts",
+  "main": "index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leahgorospe/LG-NPM-TEST.git"
