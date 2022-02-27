@@ -9,7 +9,7 @@ export class NotificationsHubConnection2 {
     private constructor(signalRBase, token) {
         //const { sendNotification2 } = require('./SignalRConstants');
         //super("/notification2", signalRBase, token);
-        alert('test' + sendNotification2);
+        alert('test' + sendNotification2.sendNotification2);
     }
 
     public static init(signalRBase, token) {
