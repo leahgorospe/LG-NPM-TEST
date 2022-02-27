@@ -1,6 +1,6 @@
 
 function registerNotification(signalRBase, token) {
-    //var NotificationsHubConnection2 = require('./signalr/NotificationsHubConnection2');
+    var NotificationsHubConnection2 = require('./signalr/NotificationsHubConnection2');
 
     alert('Initialise ' + signalRBase);
     console.log("Initialize StoredNotificationHubConnection");
