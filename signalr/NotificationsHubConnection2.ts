@@ -1,13 +1,14 @@
-import { BaseMonitorHubConnection2 } from "./BaseMonitorHubConnection2";
-import { sendNotification2 } from "./SignalRConstants";
-import { StoredNotification2 } from "./../interfaces/StoredNotification2";
+////import { BaseMonitorHubConnection2 } from "./BaseMonitorHubConnection2";
+////import { sendNotification2 } from "./SignalRConstants";
+////import { StoredNotification2 } from "./../interfaces/StoredNotification2";
 
 
-export class NotificationsHubConnection2 extends BaseMonitorHubConnection2 {
+export class NotificationsHubConnection2 {
     private static instance: NotificationsHubConnection2;
     
     private constructor(signalRBase, token) {
-        super("/notification2", signalRBase, token);
+        const { sendNotification2 } = require('./SignalRConstants');
+        //super("/notification2", signalRBase, token);
         alert('test' + sendNotification2);
     }
 
