@@ -19,7 +19,7 @@ export class BaseMonitorHubConnection2 {
         //    } as IHttpConnectionOptions)
         //    .withAutomaticReconnect()
         //    .build();
-        alert('constructor');
+        alert('base constructor');
     }
 
     //public start = async () => {
