@@ -1,6 +1,6 @@
 import { BaseMonitorHubConnection2 } from "./BaseMonitorHubConnection2";
-import { sendNotification2 } from "./SignalRConstants";
-import { StoredNotification2 } from "./../interfaces/StoredNotification2";
+////import { sendNotification2 } from "./SignalRConstants";
+////import { StoredNotification2 } from "./../interfaces/StoredNotification2";
 
 
 export class NotificationsHubConnection2 extends BaseMonitorHubConnection2 {
@@ -12,20 +12,20 @@ export class NotificationsHubConnection2 extends BaseMonitorHubConnection2 {
         alert('test');
     }
 
-    public static init(signalRBase, token) {
-        if (!NotificationsHubConnection2.instance) {
-            NotificationsHubConnection2.instance = new NotificationsHubConnection2(signalRBase, token);
-        }
-    }
+    //public static init(signalRBase, token) {
+    //    if (!NotificationsHubConnection2.instance) {
+    //        NotificationsHubConnection2.instance = new NotificationsHubConnection2(signalRBase, token);
+    //    }
+    //}
 
-    public static getInstance(): NotificationsHubConnection2 {
-        return NotificationsHubConnection2.instance;
-    }
+    //public static getInstance(): NotificationsHubConnection2 {
+    //    return NotificationsHubConnection2.instance;
+    //}
 
-    public static OnReceiveNotification = (callback: (storedNotif: StoredNotification2) => void) => {
-        NotificationsHubConnection2.instance.connection.on(sendNotification2, (storedNotif: StoredNotification2) => callback(storedNotif));
-    }
-    public static OffReceiveNotification = () => NotificationsHubConnection2.instance.connection.off(sendNotification2);
+    //public static OnReceiveNotification = (callback: (storedNotif: StoredNotification2) => void) => {
+    //    NotificationsHubConnection2.instance.connection.on(sendNotification2, (storedNotif: StoredNotification2) => callback(storedNotif));
+    //}
+    //public static OffReceiveNotification = () => NotificationsHubConnection2.instance.connection.off(sendNotification2);
 
  
 }
