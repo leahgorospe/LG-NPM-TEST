@@ -8,7 +8,7 @@ export class NotificationsHubConnection2 extends BaseMonitorHubConnection2 {
     
     private constructor(signalRBase, token) {
         super("/notification2", signalRBase, token);
-        alert('test');
+        alert('test' + sendNotification2);
     }
 
     public static init(signalRBase, token) {
