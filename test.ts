@@ -13,8 +13,8 @@ function registerNotification(signalRBase, token) {
 
 function getStatus() {
     const { NotificationsHubConnection2 } = require('./signalr/NotificationsHubConnection2');
-    ;
     alert('status ' + JSON.stringify(NotificationsHubConnection2.getInstance().connection.state));
+    return NotificationsHubConnection2.getInstance().connection.state;
 }
 
 module.exports = {

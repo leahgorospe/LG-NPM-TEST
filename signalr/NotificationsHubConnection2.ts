@@ -36,6 +36,7 @@ export class NotificationsHubConnection2 extends BaseMonitorHubConnection2 {
     }
 
     public static OnReceiveNotification = (callback: (storedNotif: StoredNotification2) => void) => {
+        alert('OnReceiveNotification');
         NotificationsHubConnection2.instance.connection.on(sendNotification2, (storedNotif: StoredNotification2) => callback(storedNotif));
     }
     public static OffReceiveNotification = () => NotificationsHubConnection2.instance.connection.off(sendNotification2);
