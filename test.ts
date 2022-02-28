@@ -36,8 +36,15 @@ function onReceivedEvent () {
     });
 }
 
+function getInstance() {
+    const { NotificationsHubConnection2 } = require('./signalr/NotificationsHubConnection2');
+
+    return NotificationsHubConnection2.getInstance();
+}
+
 module.exports = {
     registerNotification,
     getStatus,
-    onReceivedEvent
+    onReceivedEvent,
+    getInstance
 }
