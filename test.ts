@@ -5,8 +5,8 @@ function registerNotification(signalRBase, token) {
     alert('Initialise ' + signalRBase);
     console.log("Initialize StoredNotificationHubConnection");
     var x = new NotificationsHubConnection2(signalRBase, token);
-
-    alert('instantiated');
+    x.getInstance().start();
+    alert('instantiated and started');
 }
 
 
