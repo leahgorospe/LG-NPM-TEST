@@ -5,7 +5,7 @@ const { sendNotification2 } = require('./SignalRConstants');
 const { BaseMonitorHubConnection2 } = require ("./BaseMonitorHubConnection2");
 /*const StoredNotification2 = require("./../interfaces/StoredNotification2");*/
 
-interface StoredNotification2 {
+interface StoredNotification {
     id: number;
     userEmail: string;
     created: string;
@@ -35,11 +35,11 @@ export class NotificationsHubConnection2 extends BaseMonitorHubConnection2 {
         return NotificationsHubConnection2.instance;
     }
 
-    public static OnReceiveNotification = (callback: (storedNotif: StoredNotification2) => void) => {
+    public static OnReceiveNotification = (callback: (storedNotif: StoredNotification) => void) => {
         alert('OnReceiveNotification');
-        NotificationsHubConnection2.instance.connection.on(sendNotification2, (storedNotif: StoredNotification2) => callback(storedNotif));
+        NotificationsHubConnection2.instance.connection.on("SendNotification", (storedNotif: StoredNotification) => callback(storedNotif));
     }
-    public static OffReceiveNotification = () => NotificationsHubConnection2.instance.connection.off(sendNotification2);
+    public static OffReceiveNotification = () => NotificationsHubConnection2.instance.connection.off("SendNotification");
 
  
 }

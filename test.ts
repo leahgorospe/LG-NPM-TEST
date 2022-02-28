@@ -1,6 +1,16 @@
 //import "./signalr/NotificationsHubConnection2";
 //import { NotificationsHubConnection2 } from "./signalr/NotificationsHubConnection2";
 
+export interface StoredNotification {
+    id: number;
+    userEmail: string;
+    created: string;
+    title: string;
+    body: string;
+    link: string;
+    isRead: boolean;
+}
+
 function registerNotification(signalRBase, token) {
     const { NotificationsHubConnection2 } = require('./signalr/NotificationsHubConnection2');
 
@@ -17,7 +27,17 @@ function getStatus() {
     return NotificationsHubConnection2.getInstance().connection.state;
 }
 
+function onReceivedEvent () {
+    const { NotificationsHubConnection2 } = require('./signalr/NotificationsHubConnection2');
+    const { ko } = require('knockout');
+
+    NotificationsHubConnection2.OnReceiveNotification((storedNotif: StoredNotification) => {
+        ko.postbox.publish("NotificationReceived");
+    });
+}
+
 module.exports = {
     registerNotification,
-    getStatus
+    getStatus,
+    onReceivedEvent
 }

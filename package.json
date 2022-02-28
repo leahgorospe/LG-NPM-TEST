@@ -1,6 +1,6 @@
 {
   "name": "@leah.gorospe/lg-npm-test-2202",
-  "version": "1.6.7",
+  "version": "1.7.0",
   "description": "npm test",
   "main": "test.ts",
   "repository": {
@@ -28,7 +28,9 @@
     "webpack-cli": "^4.9.2",
     "webpack-merge": "5.0.9",
     "ts-loader": "9.0.0",
-    "@microsoft/signalr": "6.0.0"
+    "@microsoft/signalr": "6.0.0",
+    "knockout": "^3.5.0",
+    "knockout-postbox": "^0.6.0"
   },
   "dependencies": {}
 }
