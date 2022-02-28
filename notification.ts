@@ -1,13 +1,3 @@
-export interface StoredNotification {
-    id: number;
-    userEmail: string;
-    created: string;
-    title: string;
-    body: string;
-    link: string;
-    isRead: boolean;
-}
-
 function registerNotification(signalRBase, token) {
     const { NotificationsHubConnection } = require('./signalr/NotificationsHubConnection');
 
@@ -18,29 +8,28 @@ function registerNotification(signalRBase, token) {
 
 function getStatus() {
     const { NotificationsHubConnection } = require('./signalr/NotificationsHubConnection');
-    alert('status ' + JSON.stringify(NotificationsHubConnection.getInstance().connection.state));
     return NotificationsHubConnection.getInstance().connection.state;
 }
 
-function getInstance() {
+function onReceiveNotification() {
     const { NotificationsHubConnection } = require('./signalr/NotificationsHubConnection');
-    return NotificationsHubConnection.getInstance();
-}
-
-function OnReceive() {
-    const { NotificationsHubConnection } = require('./signalr/NotificationsHubConnection');
-    const { ko } = require('knockout');
+    const ko = require('knockout');
     const NotificationReceived = "NotificationReceived";
 
-    NotificationsHubConnection.OnReceiveNotification((storedNotif: StoredNotification) => {
-        alert('received 11');
+    NotificationsHubConnection.OnReceiveNotification((storedNotif) => {
         ko.postbox.publish(NotificationReceived);
     });
 }
 
+function offReceiveNotification() {
+    const { NotificationsHubConnection } = require('./signalr/NotificationsHubConnection');
+    NotificationsHubConnection.OffReceiveNotification();
+}
+
+
 module.exports = {
     registerNotification,
     getStatus,
-    getInstance,
-    OnReceive
+    onReceiveNotification,
+    offReceiveNotification
 }
