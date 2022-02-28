@@ -1,14 +1,6 @@
-////import {
-////    HttpTransportType,
-////    HubConnectionBuilder,
-////    IHttpConnectionOptions,
-////    HubConnection,
-////    HubConnectionState
-////} from "@microsoft/signalr";
-
 import * as signalr from "@microsoft/signalr";
 
-export class BaseMonitorHubConnection2 {
+export class BaseHubConnection {
     public connection: signalr.HubConnection;
     public hubEndpoint: string;
 
@@ -20,7 +12,6 @@ export class BaseMonitorHubConnection2 {
             } as signalR.IHttpConnectionOptions)
             .withAutomaticReconnect()
             .build();
-        alert('base constructor1 ' + `${signalRBase}${hubEndpoint.startsWith('/') ? hubEndpoint : ('/' + hubEndpoint)}`);
     }
 
     public start = async () => {
