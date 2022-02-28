@@ -20,7 +20,7 @@ export class NotificationsHubConnection2 extends BaseMonitorHubConnection2 {
     
     private constructor(signalRBase, token) {
         //const { sendNotification2 } = require('./SignalRConstants');
-        super("/notifications", signalRBase, token);
+        super("/notification", signalRBase, token);
         alert('test' + signalRBase + ' ' + token);
     }
 
