@@ -20,7 +20,7 @@ export class BaseMonitorHubConnection2 {
             } as signalR.IHttpConnectionOptions)
             .withAutomaticReconnect()
             .build();
-        alert('base constructor');
+        alert('base constructor1');
     }
 
     public start = async () => {
