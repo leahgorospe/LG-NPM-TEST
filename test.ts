@@ -27,8 +27,20 @@ function getInstance() {
     return NotificationsHubConnection.getInstance();
 }
 
+function OnReceive() {
+    const { NotificationsHubConnection } = require('./signalr/NotificationsHubConnection');
+    const { ko } = require('knockout');
+    const NotificationReceived = "NotificationReceived";
+
+    NotificationsHubConnection.OnReceiveNotification((storedNotif: StoredNotification) => {
+        alert('received 11');
+        ko.postbox.publish(NotificationReceived);
+    });
+}
+
 module.exports = {
     registerNotification,
     getStatus,
-    getInstance
+    getInstance,
+    OnReceive
 }
