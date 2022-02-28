@@ -11,5 +11,13 @@ function registerNotification(signalRBase, token) {
     alert('instantiated and started');
 }
 
+function getStatus() {
+    const { NotificationsHubConnection2 } = require('./signalr/NotificationsHubConnection2');
+    ;
+    alert('status ' + JSON.stringify(NotificationsHubConnection2.getInstance().connection.state));
+}
 
-module.exports = registerNotification
+module.exports = {
+    registerNotification,
+    getStatus
+}
